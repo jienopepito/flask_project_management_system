@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
+</head>
+<body>
+    
+<div class="main-container">
+    <h1 id="main-title">Add New Project</h1>
+    <div class="row">
+        <div></div>
+
+        <!-- content goes here -->
+        <div>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <div>
+                    {{ form.project_name.label }}<br>
+                    {{ form.project_name }}
+                </div>
+                <div>
+                    {{ form.in_charge.label }}<br>
+                    {{ form.in_charge }}
+                </div>
+                <div>
+                    {{ form.status.label }}<br>
+                    {{ form.status }}
+                </div>
+                {{ form.submit }}
+            </form>
+        </div>
+        <!-- Content ends here-->
+
+        <div></div>
+    </div>
+</div>
+
+</body>
+</html>

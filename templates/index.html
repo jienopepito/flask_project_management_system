@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
+</head>
+<body>
+    
+<div class="main-container">
+    <h1 id="main-title">Project Tracking System</h1>
+    <div class="row">
+        <div></div>
+
+        <!-- content goes here -->
+        <div>
+            <h2>Projects List 
+             <a href="{{ url_for('add_project') }}" class="add-project">Add Project</a>
+            </h2>
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <table class="records-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Project Name</th>
+                        <th>In-Charge</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in projects %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>
+                            <a href="{{ url_for('update', id_data=row[0]) }}" class="edit">Edit</a>
+                            <a href="{{ url_for('delete', id_data=row[0]) }}" onclick="return confirm('Are you sure you want to delete?')" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- Content ends here-->
+
+        <div></div>
+    </div>
+</div>
+</body>
+</html>

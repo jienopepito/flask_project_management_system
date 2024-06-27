@@ -1,0 +1,104 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#main-title {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.add-project {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    /* margin-left: 300px; */
+    float: right;
+}
+.update-button, .add-project {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: large;
+}
+
+.records-table {
+    width: 100%;  
+    margin-top: 20px;
+}
+
+.records-table th,
+.records-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.records-table th {
+    background-color: #f2f2f2;
+}
+
+.records-table td {
+    background-color: #fff;
+}
+
+.records-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.records-table tbody tr:hover {
+    background-color: #e2e2e2;
+}
+
+.edit, .delete {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.delete {
+    background-color: #dc3545;
+}
+
+
+/* update html */
+#form {
+    text-align: center;
+}
+.form-update{
+    width: 100%;  
+    margin-top: 20px;
+}
